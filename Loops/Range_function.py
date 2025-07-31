@@ -28,3 +28,24 @@ This will output:
 7
 9
 '''
+
+#Challenge1:
+'''
+Create a function named print_range that takes three parameters:
+start - the starting number (inclusive)
+end - the ending number (exclusive)
+step - the increment value
+The function should print all numbers from start to end (not including end) with the given step increment, each on a new line.
+'''
+
+def print_range(start, stop, step):
+    for i in range(start, stop, step):
+        print(i)
+        pass
+start = int(input())
+stop = int(input())
+step = int(input())
+print_range(start, stop, step)
+
+
+
