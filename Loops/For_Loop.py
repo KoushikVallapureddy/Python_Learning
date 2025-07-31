@@ -27,7 +27,7 @@ print(sum_numbers)
 This will first loop through all numbers between 1 and 101 (not including 101) and sum all of them.
 Then print the sum_numbers variables.
 """
-#Challenge:
+#Challenge1:
 '''
 Write a program that prints "Hello Coddy: " and the i value from 3 to 27 (including, 25 times in total), 
 do it using a for loop.
@@ -38,6 +38,22 @@ Hello Coddy: 4
 ...
 Hello Coddy: 27
 '''
+'''
 
 for i in range(3,28):
     print(f"Hello Koushik: {i}")
+'''
+
+#Challenge2:
+'''
+Write a program that counts the number of even numbers between 10 and 50 (inclusive).
+Use a for loop and an if statement to check if each number is even.
+Store the count in a variable called count_even.
+
+Remember, you can check if a number is even by using the modulo operator: number % 2 == 0
+'''
+count_even = 0
+for i in range(10, 51):
+    if i % 2 == 0:
+        count_even += 1
+print(count_even)
