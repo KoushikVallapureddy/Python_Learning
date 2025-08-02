@@ -50,6 +50,13 @@ Buzz
 
 '''
 
+#Challenge4:
+'''
+Adding a Twist to the game:
+Numbers that contain the digit "3" but aren't divisible by 3 or 7 will output Almost Fizz
+To check if a string contains a char use 'in' for instance, "a" in word, note that you must cast the number to string for it work use str(num)
+'''
+
 def fizzbuzz(n):
     if n % 3 == 0:
         if n % 7 == 0:
@@ -57,6 +64,8 @@ def fizzbuzz(n):
         return 'Fizz'
     elif n % 7 == 0:
         return 'Buzz'
+    elif "3" in str(n) and (n % 3 != 0 or n % 7 != 0):
+        return "Almost Fizz"
     else:
         return str(n)
 
@@ -64,4 +73,6 @@ a = int(input())
 
 for i in range(1, a + 1):
     print(fizzbuzz(i))
+    
+
 
