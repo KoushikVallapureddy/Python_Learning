@@ -13,3 +13,10 @@ The variable length will hold 4 because there are 4 elements in the list.
 
 '''
 
+#Challenge1:
+'''
+Create a list called shopping_list that contains the following items: bread, eggs, milk, and butter.
+'''
+shopping_list = ['bread', 'eggs', 'milk', 'butter']
+length = len(shopping_list)
+print('shopping_list =',shopping_list)
