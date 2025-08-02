@@ -27,3 +27,24 @@ To use/call/execute the function, we write greet():
 This will result in the same output as above.
 Important! The function code must come before it's call
 '''
+
+#Challenge1:
+'''
+Write a program that gets one input, a number. 
+The input number indicates how many times to execute the below function. 
+
+Create a function that calculates the sum of all of the numbers between 1 and 10000 (including) and prints it, 
+name the function however you like.
+Note! In your code, write the function before it's call statements.
+'''
+
+def print_sum_1_to_10000():
+    total = sum(range(1, 10001))
+    print(total)
+
+times = int(input())
+for i in range(times):
+    print_sum_1_to_10000()
+
+
+    
