@@ -30,10 +30,26 @@ Write a program that takes two numbers as input. These input numbers will be use
 Create a function that gets two arguments, calculates their product, and prints the result. You can name the function as you wish.
 Call the function using the input numbers.
 Note! In your code, write the function before it's call/execution statements.
-'''
+
 
 def calculate(number1,number2):
     print(number1*number2)
 number1 = int(input())
 number2 = int(input())
 calculate(number1,number2)
+
+'''
+
+#Challenge2:
+'''
+Create a program that calculates the area of a rectangle. The program should take two inputs: the length and width of the rectangle.
+Define a function that accepts two arguments (length and width), calculates the area of the rectangle (length * width), and prints the result.
+After defining the function, prompt the user for the length and width inputs, and then call your function with these inputs.
+Remember: Define your function before calling it in your code.
+'''
+
+def rectangle(length,width):
+    print(length * width)
+length = float(input())
+width = float(input())
+rectangle(length,width)
