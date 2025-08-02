@@ -23,3 +23,17 @@ Example of usage:
 Here we have a function called is_even that accepts one argument called number and prints if the number is even or odd. 
 Then we call the function twice:one time for all the numbers between 15 and 34, and the second time for all the numbers between 153 and 219.  
 '''
+
+#Challenge1:
+'''
+Write a program that takes two numbers as input. These input numbers will be used as arguments for the function described below.
+Create a function that gets two arguments, calculates their product, and prints the result. You can name the function as you wish.
+Call the function using the input numbers.
+Note! In your code, write the function before it's call/execution statements.
+'''
+
+def calculate(number1,number2):
+    print(number1*number2)
+number1 = int(input())
+number2 = int(input())
+calculate(number1,number2)
