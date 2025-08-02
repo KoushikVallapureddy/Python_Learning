@@ -36,7 +36,7 @@ The input number indicates how many times to execute the below function.
 Create a function that calculates the sum of all of the numbers between 1 and 10000 (including) and prints it, 
 name the function however you like.
 Note! In your code, write the function before it's call statements.
-'''
+
 
 def print_sum_1_to_10000():
     total = sum(range(1, 10001))
@@ -46,5 +46,15 @@ times = int(input())
 for i in range(times):
     print_sum_1_to_10000()
 
+'''
 
-    
+#Challenge2: 
+'''
+Write a program that receives a number n as input() and executes the function hello_function() n times
+'''
+def hello_function():
+    print("Hello Function!")
+
+n = int(input())
+for i in range(n):
+    hello_function()
