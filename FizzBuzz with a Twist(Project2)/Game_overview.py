@@ -8,3 +8,10 @@ The game involves iterating through numbers from 1 up to a specified limit. For 
 This game is an excellent way to practice using loops, conditionals, and modular arithmetic.
 
 '''
+
+#Challenge1
+'''
+For starters, just output the welcome message:
+    Welcome to FizzBuzz!
+'''
+print('Welcome to FizzBuzz!')
