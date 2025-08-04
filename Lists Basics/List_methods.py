@@ -35,7 +35,7 @@ Create a function named merge that receives two lists as arguments.
 The function merges the two lists into one sorted list and returns it.
 For example the following arguments: 
 merge([1, 4, 2], [2, 5, 9]) will return [1, 2, 2, 4, 5, 9]
-'''
+
 
 def merge(lst1, lst2):
     res = []
@@ -45,4 +45,29 @@ def merge(lst1, lst2):
         res.append(lst1[i])
     res.sort()
     return res
+
+'''
+
+#Challenge2:
+'''
+Create a function named combine_and_filter that receives 2 arguments:
+First argument is a list of numbers
+Second argument is an integer threshold value
+The function should:
+Filter out all numbers that are less than or equal to the threshold value
+Sort the remaining numbers
+Return the resulting list
+For example, calling combine_and_filter([1, 5, 3, 2, 7, 4], 3) should return [4, 5, 7].
+'''
+
+def combine_and_filter(lst, threshold):
+    filtered = []
+    for i in range(0, len(lst)):
+        if lst[i] > threshold:
+            filtered.append(lst[i])
+    filtered.sort()
+    return filtered
+    
+
+            
 
