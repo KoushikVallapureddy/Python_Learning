@@ -1,0 +1,31 @@
+'''
+List Method:
+Lists are packed with many methods (functionalities). 
+To access a method, write:
+    some_list.method()
+Here is a list of the basic methods:
+    append(element) - adds an element to the end of the list
+    clear() - removes all elements from the list
+    pop(index) - removes an element at the specified index
+    reverse() - reverses the order of the list
+    sort() - sorts the list in ascending order
+
+Here is an example of how to use the append method:
+    my_list = ["orange", "banana", "apple"]
+    my_list.append("strawberry")
+    print(my_list)
+This will output ["orange", "banana", "apple", "strawberry"].
+
+Example of the clear method:
+    my_list = [1, 2, 3, 4, 5]
+    my_list.clear()
+    print(my_list)
+This will output [].
+
+Example of the sort method:
+
+my_list = [1, 9, 2, 3]
+my_list.sort()
+print(my_list)
+This will output [1, 2, 3, 9].
+'''
