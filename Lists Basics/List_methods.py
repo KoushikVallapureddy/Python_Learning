@@ -23,9 +23,26 @@ Example of the clear method:
 This will output [].
 
 Example of the sort method:
-
-my_list = [1, 9, 2, 3]
-my_list.sort()
-print(my_list)
+    my_list = [1, 9, 2, 3]
+    my_list.sort()
+    print(my_list)
 This will output [1, 2, 3, 9].
 '''
+
+#Challenge1:
+'''
+Create a function named merge that receives two lists as arguments. 
+The function merges the two lists into one sorted list and returns it.
+For example the following arguments: 
+merge([1, 4, 2], [2, 5, 9]) will return [1, 2, 2, 4, 5, 9]
+'''
+
+def merge(lst1, lst2):
+    res = []
+    for i in range(len(lst2)):
+        res.append(lst2[i])
+    for i in range(len(lst1)):
+        res.append(lst1[i])
+    res.sort()
+    return res
+
