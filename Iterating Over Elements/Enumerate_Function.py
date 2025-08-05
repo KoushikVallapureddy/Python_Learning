@@ -18,3 +18,16 @@ Index 1: banana
 Index 2: orange
 '''
 
+#Challenge1:
+'''
+Write a program that receives a list of numbers as input (given), and prints a list of the indices of the numbers that are either below 50 or they are divisible by 5. 
+
+lst = list(map(int, input().split(",")))
+result = []
+for index, num in enumerate(lst):
+    if num < 50 or num % 5 == 0:
+        result.append(index)
+print(result)
+
+'''
+
