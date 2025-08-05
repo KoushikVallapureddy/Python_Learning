@@ -11,3 +11,17 @@ Output:
     banana
     orange
 '''
+
+#Challenge1:
+'''
+Create a program that receives a list as input (given), and prints a new list containing only the words longer than 5 characters
+
+
+lst = input().split(",")
+result = []
+for word in lst:
+    if len(word.strip()) > 5:
+        result.append(word.strip())
+print(result)
+
+'''
