@@ -31,3 +31,18 @@ Join with different separator:
 # "apple,banana,cherry"
 
 '''
+
+#Challenge1:
+'''
+Write a program that takes two inputs: a text string and a delimiter character. 
+The program should split the text by whitespace into words, 
+then join these words using the specified delimited character and print the resulting string.
+
+
+text = input()
+delimiter = input()
+result = text.split()
+result = delimiter.join(result)
+print(result)
+
+'''
