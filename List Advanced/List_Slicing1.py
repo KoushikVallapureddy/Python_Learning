@@ -40,3 +40,17 @@ print(result)
 
 '''
 
+#Challenge2:
+'''
+Create a program that takes a list and prints:
+For lists with 5 or more items: the first two and last two items
+For lists with less than 5 items: the first and last item only
+'''
+
+lst = input().split(',')
+length = len(lst)
+if length >= 5:
+    result = lst[:2] + lst[-2:]
+else:
+    result = lst[:1] + lst[-1:]
+print(result)
