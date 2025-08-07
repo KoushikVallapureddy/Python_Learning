@@ -32,3 +32,20 @@ Empty space between : means “go until the end”
 -1 means "move backwards one step at a time" 
 
 '''
+#Challenge1:
+'''
+Create a program that receives a list as input (given) and prints three new lists based on the following slicing operations:
+    A list containing every third element, starting from index 1 (the second element)
+    A list containing all the elements from the 6th element to the 1st in reverse order
+    A list containing every second element starting from the middle of the list to the end
+'''
+
+lst = input().split(',')
+length = len(lst)
+result1 = lst[1::3]
+result2 = lst[5:0:-1]
+mid = length//2
+result3 = lst[mid::2]
+print(result1)
+print(result2)
+print(result3)
