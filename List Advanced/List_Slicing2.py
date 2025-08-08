@@ -42,7 +42,7 @@ Create a program that receives a list as input (given) and prints three new list
 lst = input().split(',')
 length = len(lst)
 result1 = lst[1::3]
-result2 = lst[5:0:-1]
+result2 = lst[5::-1]
 mid = length//2
 result3 = lst[mid::2]
 print(result1)
@@ -50,3 +50,26 @@ print(result2)
 print(result3)
 
 '''
+
+#Challenge2:
+'''
+Create a program that receives a list as input and prints four new lists based on the following slicing operations:
+
+    A list containing every fourth element, starting from index 2
+    A list containing all elements from the 3rd element to the 3rd to last element
+    A list containing every element in reverse order, skipping every other element
+    A list containing the first three and last three elements of the original list
+Name the lists list1, list2, list3 and list4 - accordingly.
+'''
+
+orginal_list = input().split(',')
+length = len(orginal_list)
+list1 = orginal_list[2::4]
+list2 = orginal_list[2:-2]
+list3 = orginal_list[length::-2]
+list4 = orginal_list[:3] + orginal_list [-3:]
+print("List 1:", list1)
+print("List 2:", list2)
+print("List 3:", list3)
+print("List 4:", list4)
+
