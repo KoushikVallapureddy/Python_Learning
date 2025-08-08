@@ -38,7 +38,6 @@ Create a program that receives a list as input (given) and prints three new list
     A list containing every third element, starting from index 1 (the second element)
     A list containing all the elements from the 6th element to the 1st in reverse order
     A list containing every second element starting from the middle of the list to the end
-'''
 
 lst = input().split(',')
 length = len(lst)
@@ -49,3 +48,5 @@ result3 = lst[mid::2]
 print(result1)
 print(result2)
 print(result3)
+
+'''
