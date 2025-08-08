@@ -23,3 +23,26 @@ These operators work with other sequences too:
     stars = "*" * 5  # "*****"
 
 '''
+
+#Challenge1:
+'''
+Create a function named create_pattern that takes two arguments:
+    A list of numbers (numbers).
+    An integer (repeats).
+
+The function should:
+
+    Concatenate the list with itself (list + list).
+    Repeat the resulting list repeats times using the * operator.
+    Return the final pattern.
+
+'''
+
+def create_pattern(numbers, repeats):
+    combined_list = numbers + numbers
+    repeating_list = combined_list * repeats
+    print(repeating_list)
+numbers = list((input().split(',')))
+repeats = int(input())
+create_pattern(numbers, repeats)
+
