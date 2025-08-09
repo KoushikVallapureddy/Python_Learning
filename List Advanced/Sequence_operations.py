@@ -36,7 +36,6 @@ The function should:
     Repeat the resulting list repeats times using the * operator.
     Return the final pattern.
 
-'''
 
 def create_pattern(numbers, repeats):
     combined_list = numbers + numbers
@@ -45,4 +44,26 @@ def create_pattern(numbers, repeats):
 numbers = list((input().split(',')))
 repeats = int(input())
 create_pattern(numbers, repeats)
+
+'''
+
+#Challenge2:
+'''
+Create a program that receives a list of numbers as input and prints a new list that:
+
+    Contains the original list followed by its reverse
+    Has the first element of the original list inserted at the beginning and the last element inserted at the end
+    Repeats this entire sequence twice
+
+'''
+numbers = input().split()
+list1 = numbers[0]
+list2 = numbers
+list3 = numbers[::-1]
+list4 = numbers[-1:]
+total_list = [list1]+list2+list3+list4
+final_list = total_list * 2
+print(final_list)
+
+
 
