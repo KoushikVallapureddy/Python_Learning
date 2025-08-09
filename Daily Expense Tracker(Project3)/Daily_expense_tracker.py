@@ -145,6 +145,19 @@ Code: Challenge6
         print('All expenses cleared.')
 '''
 
+#Challenge 7: Handling Errors
+'''
+Handling Errors:
+Lastly, handle the option where the choice of the user is not in the range 1 to 5. Output:
+    Invalid choice. Please try again.
+
+#Code: Challenge7
+    else:
+        print('Invalid choice. Please try again.')
+
+'''
+
+
 
 #Challenge1: Welcome Message and Menu
 print('Welcome to the Daily Expense Tracker!\n')
@@ -186,6 +199,10 @@ while True:
     elif choice == '5':
         print('Exiting the Daily Expense Tracker. Goodbye!')
         break
+    #Challenge 7: Handling Errors
+    else:
+        print('Invalid choice. Please try again.')
+
 
 
 
