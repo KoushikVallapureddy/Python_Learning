@@ -34,10 +34,35 @@ Now let's create the actual program!
 2. In each iteration of the loop, get input from the user, this will be the choice (1 - 5 from the menu)
 3. Handle the first case, if the choice is equal to 5, exit the program (loop) and output:
     Exiting the Daily Expense Tracker. Goodbye!
-'''
 
+#Code:
 while True:
-    choice = input('Enter your choice (1-5): ')
+    choice = input()
     if choice == '5':
         print('Exiting the Daily Expense Tracker. Goodbye!')
         break
+'''
+
+#Challenge3:
+'''
+Add Expense:
+
+Handle the option where the user adds an expense (1).
+1. Initialize in the start of the program an empty expenses list
+2. When the user selects 1 as a choice, get another input from the user, a float, and add its value to the expenses list.
+3. After adding, output:
+    Expense added successfully!
+'''
+expenses = []
+while True:
+    choice = input()
+    if choice == '1':
+        expenses.append(float(input()))
+        print('Expense added successfully!')
+    elif choice == '5':
+        print('Exiting the Daily Expense Tracker. Goodbye!')
+        break
+
+
+
+    
