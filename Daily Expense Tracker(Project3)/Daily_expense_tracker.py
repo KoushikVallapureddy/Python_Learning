@@ -131,6 +131,21 @@ Assuming the expenses entered before were 300, 200 and 100. (In that order!)
             print(f'Average expense: {average}')
 '''
 
+#Challenge6: Clear All
+'''
+Clear All:
+
+Handle the option to clear all expenses (4).
+After you clear the expenses list, output:
+    All expenses cleared.
+
+Code: Challenge6
+    if choice == '4':
+        expenses.clear()
+        print('All expenses cleared.')
+'''
+
+
 #Challenge1: Welcome Message and Menu
 print('Welcome to the Daily Expense Tracker!\n')
 print('Menu:')
@@ -163,6 +178,10 @@ while True:
             average = total/len(expenses)
             print(f'Total expense: {total}')
             print(f'Average expense: {average}')
+    #Challenge6: Clear All
+    elif choice == '4':
+        expenses.clear()
+        print('All expenses cleared.')
     #Challenge2: Exit the Program
     elif choice == '5':
         print('Exiting the Daily Expense Tracker. Goodbye!')
