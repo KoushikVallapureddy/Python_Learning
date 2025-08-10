@@ -40,3 +40,26 @@ In the second example, employee is a dictionary containing information about an 
 The third example shows how to create an empty dictionary, which can be useful when you want to add items to it later.
 
 '''
+
+#Challenge:
+'''
+Create a function named create_student_dict that takes three parameters: name, age, and major. 
+The function should return a dictionary where the keys are "name", "age", and "major", and the values are the corresponding values passed to the function.
+
+For example, calling create_student_dict("Alice", 20, "Computer Science") should return a dictionary with the following key-value pairs:
+    Key: "name", Value: "Alice"
+    Key: "age", Value: 20
+    Key: "major", Value: "Computer Science"
+'''
+
+def create_student_dict(name, age, major):
+    student_dict = {
+        'name' : name,
+        'age' : age,
+        'major' : major
+    }
+    return student_dict
+name = input("Enter name: ")
+age = int(input('Enter age: '))
+major = input('Enter major: ')
+print(create_student_dict(name, age, major))
