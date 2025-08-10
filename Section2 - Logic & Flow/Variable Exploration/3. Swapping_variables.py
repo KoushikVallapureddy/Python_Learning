@@ -23,3 +23,14 @@ Pythonic Way (Simultaneous Assignment):
 In the Pythonic way, the values of b and a are simultaneously assigned to a and b, respectively. 
 This approach is more readable and doesn't require any additional variables.
 '''
+
+#Challenge:
+'''
+Write a Python program to swap the values of two variables without using a temporary variable. 
+Initialize two variables, x and y, with the values 5 and 10 respectively. Swap their values and then print them.
+'''
+x = 5
+y = 10
+x,y = y,x
+print(x)
+print(y)
