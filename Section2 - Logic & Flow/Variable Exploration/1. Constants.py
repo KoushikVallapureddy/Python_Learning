@@ -17,3 +17,18 @@ When you see variables named this way in Python code, it's a signal that these v
 This convention helps make the code more readable and maintainable. 
 It's important to note that this is just a naming convention; the Python interpreter itself does not prevent you from changing the value of these variables.
 '''
+
+#Challeneg1:
+'''
+Create a Python program that calculates the area of a circle using a constant for the value of PI. 
+Define a constant named PI and set its value to 3.14159. Then, prompt the user to enter the radius of the circle. 
+Calculate the area of the circle using the formula (area = PI * radius**2) and print the result.
+
+Remember to follow the naming convention for constants by using all uppercase letters for the variable PI.
+
+'''
+
+PI = 3.14159
+radius = float(input())
+area = PI * radius ** 2
+print(f'{area}')
