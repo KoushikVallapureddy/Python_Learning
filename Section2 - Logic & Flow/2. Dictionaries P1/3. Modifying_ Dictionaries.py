@@ -29,3 +29,23 @@ In these examples, we first add a new key-value pair to an empty dictionary.
 Then, we update the value of an existing key. Finally, we delete a key-value pair using the del keyword.
 '''
 
+#Challenge:
+'''
+Create a function named update_employee_info that takes three parameters: employee_dict (a dictionary), key (a string), and value. 
+The function should update the employee_dict with the new key and value. If the key already exists, its value should be updated. 
+If the key does not exist, a new key-value pair should be added. The function should return the updated dictionary.
+''' 
+
+def update_employee_info(employee_dict, key, value):
+    employee_dict[key] = value
+    return employee_dict
+
+employee_dict = {
+    "name": "John Doe",
+    'age': 30,
+    'position': 'Software Engineer'
+}
+
+key = input()
+value = input()
+print(update_employee_info(employee_dict, key, value))
