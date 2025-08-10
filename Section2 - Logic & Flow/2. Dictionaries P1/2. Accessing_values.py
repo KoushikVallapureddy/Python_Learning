@@ -38,7 +38,7 @@ country_capitals = {
     "France": "Paris",
     "Japan": "Tokyo"
 }
-country_name = input("Enter country name: ")
+country_name = input("Enter country name:")
 print(get_capital(country_capitals, country_name))
 
 
