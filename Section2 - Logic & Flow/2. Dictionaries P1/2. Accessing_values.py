@@ -23,3 +23,23 @@ In this example, we access the capital of the USA by using the key "USA".
 If you try to access a key that does not exist in the dictionary, Python will raise a KeyError.
 
 '''
+
+#Challenege:
+
+'''
+Create a function named get_capital that takes two parameters: country_capitals (a dictionary) and country_name (a string). 
+The function should return the capital city of the given country name using the country_capitals dictionary.
+'''
+
+def get_capital(country_capitals, country_name):
+    return country_capitals[country_name]
+country_capitals = {
+    "USA": "Washington, D.C.",
+    "France": "Paris",
+    "Japan": "Tokyo"
+}
+country_name = input("Enter country name: ")
+print(get_capital(country_capitals, country_name))
+
+
+
