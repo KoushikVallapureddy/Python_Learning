@@ -41,7 +41,7 @@ The third example shows how to create an empty dictionary, which can be useful w
 
 '''
 
-#Challenge:
+#Challenge1:
 '''
 Create a function named create_student_dict that takes three parameters: name, age, and major. 
 The function should return a dictionary where the keys are "name", "age", and "major", and the values are the corresponding values passed to the function.
@@ -50,7 +50,7 @@ For example, calling create_student_dict("Alice", 20, "Computer Science") should
     Key: "name", Value: "Alice"
     Key: "age", Value: 20
     Key: "major", Value: "Computer Science"
-'''
+
 
 def create_student_dict(name, age, major):
     student_dict = {
@@ -63,3 +63,30 @@ name = input("Enter name: ")
 age = int(input('Enter age: '))
 major = input('Enter major: ')
 print(create_student_dict(name, age, major))
+
+'''
+
+#Challenge2:
+'''
+Create a function named create_book_dict that takes three parameters: title, author, and year. 
+The function should return a dictionary where the keys are "title", "author", and "year", and the values are the corresponding values passed to the function.
+
+For example, calling create_book_dict("To Kill a Mockingbird", "Harper Lee", 1960) should return a dictionary with the following key-value pairs:
+    Key: "title", Value: "To Kill a Mockingbird"
+    Key: "author", Value: "Harper Lee"
+    Key: "year", Value: 1960
+'''
+
+def create_book_dict(title, author, year):
+    book_dict = {
+        'title': title,
+        'author': author,
+        'year': year
+    }
+
+    return book_dict
+title = input('Enter book title: ')
+author = input('Enter author name: ')
+year = int(input('Enter year of publication: '))
+print(create_book_dict(title, author, year))
+
