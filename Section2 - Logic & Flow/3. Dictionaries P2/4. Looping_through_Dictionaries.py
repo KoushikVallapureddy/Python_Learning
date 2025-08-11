@@ -38,7 +38,7 @@ The third loop uses the items() method to iterate over both keys and values simu
 Create a function named print_employee_details that takes a dictionary employee_data as an argument. 
 The function should loop through the dictionary and print each key-value pair in the format 'key: value'. 
 If the dictionary is empty, the function should print 'No data available'.
-'''
+
 def print_employee_details(employee_data):
     if not employee_data:
         print('No data available')
@@ -49,4 +49,22 @@ def print_employee_details(employee_data):
 employee_details = {'Alice': 'Engineer', 'Bob': 'Manager', 'Charlie': 'Analyst'}
 print_employee_details(employee_details)
 
+'''
+
+#Challenge2:
+"""
+Create a function named print_product_details that takes a dictionary product_data as an argument. 
+The function should loop through the dictionary and print each key-value pair in the format 'Key: Value', with the key capitalized. 
+If the dictionary is empty, the function should print 'No product information available'.
+"""
+
+def print_product_details(product_data):
+    if not product_data:
+        print('No product information available')
+    else:
+        for key, value in product_data.items():
+            print(f'{key.capitalize()}: {value}')
+            
+product_details = {"name":"Headphones","brand":"Sony","price":199.99,"stock":30}
+print_product_details(product_details)
 
