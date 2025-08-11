@@ -35,3 +35,51 @@ pop(key): Removes the element with the specified key and returns its value.
     print(my_dict)
     # Output: {'name': 'Alice', 'age': 30}
 '''
+
+
+#Challenge1:
+'''
+In this challenge, you'll work with a dictionary of student grades to practice essential dictionary operations.
+
+Follow these steps:
+
+1. Create a dictionary named grades with these initial key-value pairs:
+    "Alice": 85
+    "Bob": 90
+    "Charlie": 78
+2. Print all student names (keys) and grades (values) using dictionary methods.
+3. Add a new student "Diana" with a grade of 92.
+4. Use the get() method to retrieve and print Bob's grade.
+5. Remove "Charlie" from the dictionary using the pop() method and print the updated dictionary.
+
+Ensure your output matches the expected format shown in the example.
+Example Output:
+    Students: dict_keys(['Alice', 'Bob', 'Charlie'])
+    Grades: dict_values([85, 90, 78])
+    Bob's grade: 90
+    Updated grades: {'Alice': 85, 'Bob': 90, 'Diana' : 92}
+'''
+
+#Step1: Create a dictionary.
+grades = {
+    'Alice' : 85,
+    'Bob' : 90,
+    "Charlie" : 78
+}
+
+#Step2: Print all students names and grades.
+print('Students:', grades.keys())
+print("Grades:", grades.values())
+
+#Step3: Add a bew student "Diana" with a grade of 92.
+grades['Diana'] = 92
+
+#Step4: Use the get() method to retrieve and print Bob's grade.
+print("Bob's grade:", grades.get('Bob'))
+
+#Step5: Remove "Charlie" from the dictionary using the pop() method and print the updated dictionary.
+
+remove_charlie = grades.pop('Charlie')
+print("Updated grades:", grades)
+
+
