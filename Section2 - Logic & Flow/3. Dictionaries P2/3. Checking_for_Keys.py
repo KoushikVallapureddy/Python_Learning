@@ -26,3 +26,23 @@ Using the keys() method:
 
 Here, my_dict.keys() returns a list of all keys in the dictionary, and we use in to check if 'age' is in that list.
 '''
+
+#Challenge1:
+'''
+You are managing a dictionary of employee data, where each key is an employee's name and the value is their department. Your task is to:
+
+Check if "Alice" is a key in the dictionary.
+    If it exists, print: "Alice is in the company."
+Check if "John" is not a key in the dictionary.
+    If it does not exist, print: 
+    "John is not in the company."
+'''
+
+employee_data = {'Alice':'HR', 'Bob':'Engineering', 'Diana':'Marketing'}
+# Check if "Alice" is a key in the dictionary
+if 'Alice' in employee_data:
+    print('Alice is in the company.')
+#Check if "John" is not a key in the dictionary
+if 'John' not in employee_data:
+    print('John is not in the company.')
+
