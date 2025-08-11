@@ -32,3 +32,21 @@ In these examples, the first loop iterates over the keys of the dictionary.
 The second loop iterates over the values using the values() method. 
 The third loop uses the items() method to iterate over both keys and values simultaneously.
 '''
+
+#Challenge1:
+'''
+Create a function named print_employee_details that takes a dictionary employee_data as an argument. 
+The function should loop through the dictionary and print each key-value pair in the format 'key: value'. 
+If the dictionary is empty, the function should print 'No data available'.
+'''
+def print_employee_details(employee_data):
+    if not employee_data:
+        print('No data available')
+    else:
+        for key, Value in employee_data.items():
+            print(f'{key}: {Value}')
+
+employee_details = {'Alice': 'Engineer', 'Bob': 'Manager', 'Charlie': 'Analyst'}
+print_employee_details(employee_details)
+
+
