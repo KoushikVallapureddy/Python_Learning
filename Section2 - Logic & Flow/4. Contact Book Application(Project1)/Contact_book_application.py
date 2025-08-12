@@ -33,6 +33,34 @@ Now, create the add_contact function that takes one argument: contact_book (a di
 Then print: "Contact added successfully!".
 '''
 
+# 3. View Contact
+'''
+Create a function named view_contact that displays details of a specific contact.
+
+Your function should:
+    Take a contact book dictionary as input
+    Ask the user to enter a contact name
+    Display the contact's details if found
+    Print "Contact not found!" if the contact doesn't exist
+
+When displaying a contact, use this exact format:
+    Name: [name]
+    Phone: [phone]
+    Email: [email]
+    Address: [address]
+
+Example:
+If the contact book contains Alice's information and the user enters "Alice", output:
+    Name: Alice
+    Phone: 123-456-7890
+    Email: alice@example.com
+    Address: 123 Main St
+
+If the user enters "Bob" (who doesn't exist), output:
+    Contact not found!
+
+'''
+
 # 1. Display name: 
 
 def display_menu():
@@ -55,7 +83,7 @@ def add_contact(contact_book):
     phone = input()
     email = input()
     address = input()
-    contact_book = {
+    contact_book[name]= {
         "phone" : phone,
         "email" : email,
         'address' : address}
@@ -63,6 +91,24 @@ def add_contact(contact_book):
 
 contact_book = {}
 add_contact(contact_book)
+
+
+
+#3. View Contact
+def view_contact(contact_book):
+    name = input()
+    if name in contact_book:
+        contact = contact_book[name]
+        print(f'Name: {name}')
+        print(f'Phone: {contact["phone"]}')
+        print(f'Email: {contact["email"]}')
+        print(f'Address: {contact["address"]}')
+    else:
+        print('Contact not found!')
+
+view_contact(contact_book)
+    
+
 
 
 
