@@ -61,6 +61,43 @@ If the user enters "Bob" (who doesn't exist), output:
 
 '''
 
+# 4. Edit Contac
+'''
+The next step is to create the edit_contact function. This function will allow users to update the details of an existing contact in the Contact Book.
+
+Your Task:
+
+    1. Create a function named edit_contact that takes one argument: contact_book (a dictionary).
+    2. Get input for the contact's name that the user wants to edit.
+    3. Check if the name exists in the contact_book:
+        a. If it exists, prompt the user to input new values for the contact's phone, email, and address (in that order!).
+        b. If the user provides no input (presses Enter), keep the current value for that field (in this case the input will be an empty string, '').
+        c. Update the contact's information in the dictionary.
+        d. Print: "Contact updated successfully!".
+    If the contact does not exist, print: 
+        "Contact not found!".
+
+Expected Behavior:
+For a contact_book containing:
+    {"Alice": {"phone": "123-456-7890", "email": "alice@example.com", "address": "123 Main St"}}
+
+If the user enters:
+    Alice
+    987-654-3210
+
+    456 Elm St
+
+The updated contact_book should look like this:
+    {"Alice": {"phone": "987-654-3210", "email": "alice@example.com", "address": "456 Elm St"}}
+
+If the user enters a name that does not exist:
+    Bob
+
+The output should be:
+    Contact not found!
+
+'''
+
 # 1. Display name: 
 
 def display_menu():
@@ -95,6 +132,7 @@ add_contact(contact_book)
 
 
 #3. View Contact
+
 def view_contact(contact_book):
     name = input()
     if name in contact_book:
@@ -108,6 +146,31 @@ def view_contact(contact_book):
 
 view_contact(contact_book)
     
+
+# 4. Edit Contact
+
+def edit_contact(contact_book):
+    name = input()
+    if name in contact_book:
+        phone = input()
+        email = input()
+        address = input()
+        if phone == '':
+            phone = contact_book[name]['phone']
+        if email == '':
+            email = contact_book[name]['email']
+        if address == '':
+            address = contact_book[name]['address']
+        contact_book[name] = {"phone": phone, "email": email, "address": address}
+        print('Contact updated successfully!')
+    else:
+        print('Contact not found!')
+
+edit_contact(contact_book)
+
+
+
+
 
 
 
