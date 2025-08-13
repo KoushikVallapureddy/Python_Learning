@@ -109,6 +109,37 @@ Your Task:
         b. Print: "Contact deleted successfully!".
     4. If the contact does not exist, print: "Contact not found!".
 
+    
+# Challenge 6. List All
+The next step is to create the list_all_contacts function. This function will allow users to view all the contacts stored in the Contact Book along with their details.
+
+Your Task:
+
+    1. Create a function named list_all_contacts that takes one argument: contact_book (a dictionary).
+    2. Check if the contact_book is empty:
+        a. If it is empty, print: "No contacts available.".
+    3. If it is not empty:
+        a. Loop through each contact in the dictionary and print their name, phone, email, and address in a readable format.
+
+Expected Behavior:
+
+For a contact_book containing:
+{
+    "Alice": {"phone": "123-456-7890", "email": "alice@example.com", "address": "123 Main St"},
+    "Bob": {"phone": "234-567-8901", "email": "bob@example.com", "address": "456 Oak Ave"}
+}
+
+The output should be:
+    Name: Alice
+    Phone: 123-456-7890
+    Email: alice@example.com
+    Address: 123 Main St
+
+    Name: Bob
+    Phone: 234-567-8901
+    Email: bob@example.com
+    Address: 456 Oak Ave
+
 '''
 
 # 1. Display name: 
@@ -182,6 +213,7 @@ def edit_contact(contact_book):
 edit_contact(contact_book)
 
 # 5. Delete Contact
+
 def delete_contact(contact_book):
     name = input()
     if name in contact_book:
@@ -192,7 +224,24 @@ def delete_contact(contact_book):
 
 delete_contact(contact_book)
 
-    
+
+# 6. List All
+
+def list_all_contacts(contact_book):
+    if contact_book == {}:
+        print('No contacts available')
+    else:
+        for name, details in contact_book.items():
+            print(f'Name: {name}')
+            print(f'Phone: {details['phone']}')
+            print(f'Email: {details['email']}')
+            print(f'Address: {details['address']}')
+            print()
+
+list_all_contacts(contact_book)
+
+
+
 
 
 
