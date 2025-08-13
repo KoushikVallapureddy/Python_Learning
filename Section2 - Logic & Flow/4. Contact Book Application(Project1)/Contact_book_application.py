@@ -110,7 +110,7 @@ Your Task:
     4. If the contact does not exist, print: "Contact not found!".
 
     
-# Challenge 6. List All
+# 6. List All
 The next step is to create the list_all_contacts function. This function will allow users to view all the contacts stored in the Contact Book along with their details.
 
 Your Task:
@@ -139,6 +139,37 @@ The output should be:
     Phone: 234-567-8901
     Email: bob@example.com
     Address: 456 Oak Ave
+
+    
+# 7. Everything together
+
+Now that you’ve built all the individual functions for the Contact Book, it’s time to put them together to create the full program!
+
+Your Task:
+
+    1. Combine the functions you’ve created:
+        a. display_menu: Displays the menu options for the user.
+        b. add_contact: Adds a new contact to the Contact Book.
+        c. view_contact: Displays details for a specific contact.
+        d. edit_contact: Updates an existing contact’s information.
+        e. delete_contact: Removes a contact from the Contact Book.
+        f. list_all_contacts: Displays all the contacts in the Contact Book.
+    2. Create a dictionary called contact_book to store the contacts.
+    3. Write a loop that:
+        a. Displays the menu using display_menu.
+        b. Accepts user input for the menu choice.
+        c. Calls the appropriate function based on the user’s choice.
+        d. Continues until the user selects the option to exit the program.
+
+Expected Behavior:
+
+When you run the program, it should:
+
+    1. Show a menu of options for the user to choose from.
+    2. Allow the user to interact with the Contact Book by calling the appropriate function.
+    3. Exit the program cleanly when the user selects the "Exit" option.
+
+This final step combines all the knowledge you’ve gained into a fully functioning Contact Book application. Enjoy seeing your hard work come together! 🎉
 
 '''
 
@@ -229,17 +260,40 @@ delete_contact(contact_book)
 
 def list_all_contacts(contact_book):
     if contact_book == {}:
-        print('No contacts available')
+        print('No contacts available.')
     else:
         for name, details in contact_book.items():
             print(f'Name: {name}')
-            print(f'Phone: {details['phone']}')
-            print(f'Email: {details['email']}')
-            print(f'Address: {details['address']}')
+            print(f'Phone: {details["phone"]}')
+            print(f'Email: {details["email"]}')
+            print(f'Address: {details["address"]}')
             print()
 
 list_all_contacts(contact_book)
 
+
+
+# 7. Everything together:
+
+contact_book = {}
+
+while True:
+    display_menu()
+    choice = input()
+    if choice == "1":
+        add_contact(contact_book)
+    elif choice == "2":
+        view_contact(contact_book)
+    elif choice == "3":
+        edit_contact(contact_book)
+    elif choice == "4":
+        delete_contact(contact_book)
+    elif choice == "5":
+        list_all_contacts(contact_book)
+    elif choice == "6":
+        break
+    else:
+        print("Invalid choice. Please try again.")
 
 
 
