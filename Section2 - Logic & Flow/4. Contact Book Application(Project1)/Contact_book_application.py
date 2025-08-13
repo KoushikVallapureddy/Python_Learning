@@ -96,6 +96,19 @@ If the user enters a name that does not exist:
 The output should be:
     Contact not found!
 
+    
+# 5. Delete Contact
+
+The next step is to create the delete_contact function. This function will allow users to remove a specific contact from the Contact Book.
+
+Your Task:
+    1. Create a function named delete_contact that takes one argument: contact_book (a dictionary).
+    2. Get input for the contact's name that the user wants to delete.
+    3. Check if the name exists in the contact_book:
+        a. If it exists, remove the contact from the dictionary.
+        b. Print: "Contact deleted successfully!".
+    4. If the contact does not exist, print: "Contact not found!".
+
 '''
 
 # 1. Display name: 
@@ -168,7 +181,18 @@ def edit_contact(contact_book):
 
 edit_contact(contact_book)
 
+# 5. Delete Contact
+def delete_contact(contact_book):
+    name = input()
+    if name in contact_book:
+        del contact_book[name]
+        print('Contact deleted successfully!')
+    else:
+        print('Contact not found!')
 
+delete_contact(contact_book)
+
+    
 
 
 
