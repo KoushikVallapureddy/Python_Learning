@@ -26,7 +26,23 @@ Create a program that takes an integer score from the user. The program should u
     If the score is greater than or equal to 50, the status should be "Pass".
     If the score is less than 50, the status should be "Fail".
 The program should output the determined status.
-'''
+
 score = int(input())
 result = 'Pass' if score >= 50 else 'Fail'
 print(result)
+
+'''
+
+
+#Challenge2:
+'''
+Write a program that takes a float input temperature representing the current temperature in Celsius. Use the ternary operator to determine a
+warning status based on the temperature:
+    If the temperature is above 30°C, the warning should be "Hot".
+    If the temperature is 30°C or below, the warning should be "Normal".
+The program should output the determined warning status.
+'''
+
+temp = float(input())
+status = 'Hot' if temp > 30 else 'Normal'
+print(status)
