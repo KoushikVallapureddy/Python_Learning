@@ -38,3 +38,30 @@ list1 = [1, 2, 3]
 list2 = list1
 print(list1 is list2)
 print(list1 is not list2)
+
+
+
+#Challenge2:
+'''
+Create a function named compare_strings that takes two strings, str1 and str2, as arguments. The function should perform the following operations:
+    Check if str1 is a substring of str2.
+    Check if str2 starts with str1.
+    Check if str2 ends with str1.
+    Check if str1 and str2 are equal (case-insensitive).
+    Return a dictionary containing the results of these operations, with the keys "is_substring", "starts_with", "ends_with", and "is_equal".
+'''
+
+def compare_strings(str1, str2):
+    result = {
+        "is_substring": str1 in str2,
+        "starts_with": str2.startswith(str1),
+        "ends_with": str2.endswith(str1),
+        "is_equal": str1.lower() == str2.lower()
+    }
+    print(result)
+    
+    
+
+str1 = input()
+str2 = input()
+compare_strings(str1, str2)
