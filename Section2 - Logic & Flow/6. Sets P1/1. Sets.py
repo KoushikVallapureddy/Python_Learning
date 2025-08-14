@@ -20,3 +20,16 @@ The third example shows how to create an empty set using the set() constructor.
 Note that you cannot create an empty set using empty curly braces {} because that would create an empty dictionary instead.
 '''
 
+#Challenge:
+'''
+Write a program that:
+
+1. Creates a set called numbers containing the values 1, 2, 3, 4, 5.
+2. Creates a set called fruits containing the values "apple", "banana", and "cherry".
+3. Prints both sets.
+
+The test cases can seem weird but they are OK, notice that sets are unordered so they can be printed in any order
+'''
+numbers = {1,2,3,4,5}
+fruits = {'apple', 'banana', 'cherry'}
+print(numbers, fruits)
