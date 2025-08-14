@@ -17,7 +17,7 @@ For dictionaries, membership checks apply to keys by default:
     print("Alice" in my_dict)  # False
 '''
 
-#Challenge
+#Challenge1
 
 '''
 You are given a list of names and a dictionary of student grades. Write a program that:
@@ -42,3 +42,40 @@ print(result)
 
 result = "Eve is in the dictionary." if "Eve" in grades else "Eve is not in the dictionary."
 print(result)
+
+
+
+#Challenge2
+
+'''
+You are given a list of product names and a dictionary of product quantities for a grocery store. 
+Write a function named check_inventory that takes two parameters: products (a list) and quantities (a dictionary). 
+The function should perform the following checks:
+    Check if 'Apples' is in the product list.
+    Check if 'Oranges' is not in the product list.
+    Check if 'Bananas' is in the quantities dictionary.
+    Check if 'Grapes' is not in the quantities dictionary.
+For each check, print an appropriate message as shown in the test cases.
+'''
+
+def check_inventory(products, quantities):
+    if 'Apples' in products:
+        print("Apples are available in the product list.")
+    else:
+        print("Apples are not available in the product list.")
+
+    if 'Oranges' not in products:
+        print("Oranges are not available in the product list.")
+    else:
+        print("Oranges are available in the product list.")
+
+    if 'Bananas' in quantities:
+        print("Bananas are in stock.")
+    else:
+        print("Bananas are not in stock.")
+
+    if 'Grapes' not in quantities:
+        print("Grapes are not in stock.")
+    else:
+        print("Grapes are in stock.")
+
