@@ -79,3 +79,6 @@ def check_inventory(products, quantities):
     else:
         print("Grapes are in stock.")
 
+products = input()
+quantities = input()
+check_inventory(products, quantities)
