@@ -23,3 +23,18 @@ x and z are different objects, so x is not z returns True.
 Identity checks are particularly useful when you want to determine if two variables are pointing to the same object in memory, rather than just
 having the same value.
 '''
+
+#Challenge1:
+
+'''
+Create two variables, list1 and list2, where:
+    list1 refers to a list [1, 2, 3].
+    list2 is assigned to the same object.
+Use the is operator to check if list1 and list2 refer to the same object.
+Use the is not operator to check if list1 and list2 refer to different objects.
+Print the results of the checks.
+'''
+list1 = [1, 2, 3]
+list2 = list1
+print(list1 is list2)
+print(list1 is not list2)
