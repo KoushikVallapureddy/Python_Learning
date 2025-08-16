@@ -27,3 +27,28 @@ Difference Between Multiple Sets (- or difference()): You can find the elements 
 In these examples, we first find the intersection of three sets, resulting in a set containing only the element common to all three sets. Then, we find the difference between multiple sets, resulting in a set containing only the elements that are unique to set1 after subtracting the elements of set2 and set3.
 '''
 
+#Challenge:
+'''
+Imagine you are managing an exclusive club where members are split into different groups based on their interests. You want to find out:
+
+    Who are the members that share a common interest in all groups?
+    Who are the truly unique members who belong only to the first group and not to any others?
+
+Write a program that:
+    Takes three sets, group1, group2, and group3, representing members of three interest groups.
+    Finds and prints the intersection of all three groups (members common to all groups).
+    Finds and prints the difference of group1 from the other two groups (members only in the first group).
+
+Check the test cases for the final output format!
+
+'''
+
+group1 = eval(input())
+group2 = eval(input())
+group3 = eval(input())
+
+intersection_result = group1 & group2 & group3
+difference_result = group1.difference(group2, group3)
+
+print("Members in all groups:", sorted(list(intersection_result)))
+print("Unique members in group1:", sorted(list(difference_result)))
