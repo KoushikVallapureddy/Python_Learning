@@ -36,3 +36,40 @@ Checking for a proper superset (>):
     # Output: True
 Here, set1 is a proper superset of set2 because set1 is a superset of set2, and set1 contains at least one element not in set2.
 '''
+
+#Challenge:
+'''
+Create a function named check_sets that takes two sets, set1 and set2, as arguments. The function should perform the following operations:
+    Check if set1 is a subset of set2.
+    Check if set2 is a superset of set1.
+    Check if set1 is a proper subset of set2.
+    Check if set2 is a proper superset of set1.
+    Return a dictionary containing the results of these operations, with the keys "is_subset", "is_superset", "is_proper_subset", and
+    "is_proper_superset".
+
+'''
+
+def check_sets(set1, set2):
+    # Check if set1 is a subset of set2
+    is_subset = set1 <= set2
+
+    # Check if set2 is a superset of set1
+    is_superset = set2 >= set1
+
+    # Check if set1 is a proper subset of set2
+    is_proper_subset = set1 < set2
+
+    # Check if set2 is a proper superset of set1
+    is_proper_superset = set2 > set1
+
+    # Return a dictionary containing the results
+    return {
+        "is_subset": is_subset,
+        "is_superset": is_superset,
+        "is_proper_subset": is_proper_subset,
+        "is_proper_superset": is_proper_superset
+    }
+
+set1 = set()
+set2 = set()
+print(check_sets(set1, set2))
