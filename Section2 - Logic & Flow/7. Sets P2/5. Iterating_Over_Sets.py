@@ -34,3 +34,20 @@ In this example, we first convert my_set to a list using list(my_set), then sort
 The for loop then iterates over the sorted list, printing each element in ascending order.
 
 '''
+
+#Challenge1:
+'''
+Create a function named iterate_and_filter_set that takes a set input_set as an argument. 
+The function should iterate over the elements in the set and filter out numbers that are greater than 10. 
+The function should return a new set containing only the numbers that are less than or equal to 10.
+
+'''
+def iterate_and_filter_set(input_set):
+    filtered_set = set()
+    for element in input_set:
+        if element <= 10:
+            filtered_set.add(element)
+    return filtered_set
+
+input_set = {10}
+print(iterate_and_filter_set(input_set))
