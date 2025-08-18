@@ -96,7 +96,49 @@ Add (replace) the following block of code at the bottom of your code:
     print(calculate_average_grade("Charlie"))  # Non-existent student, should print message and return None
     print(calculate_average_grade("Alice"))  # Should return 87.5 again
 '''
+#Challenge6: List by Course
+'''
+Create a function named list_students_by_course that takes one argument: course (string). The function should:
+    1. Iterate through the student_records dictionary and find all students enrolled in the specified course.
+    2. Return a list of names of students who are enrolled in the course.
+    3. If no students are enrolled in the course, return an empty list.
 
+Add (replace) the following block of code at the bottom of your code:
+
+add_student("Alice", 20, ["Math", "Physics"])
+add_student("Bob", 22, ["Math", "Biology"])
+add_student("Diana", 23, ["Chemistry", "Physics"])
+print(list_students_by_course("Math"))  # Should return ["Alice", "Bob"]
+print(list_students_by_course("Physics"))  # Should return ["Alice", "Diana"]
+print(list_students_by_course("Biology"))  # Should return ["Bob"]
+print(list_students_by_course("History"))  # Should return an empty list
+'''
+
+#Challenge7: Top Students
+'''
+Create a function named filter_top_students that takes one argument: threshold (float). The function should:
+
+1. Iterate through the student_records dictionary and find all students whose average grade is greater than the specified threshold.
+2. Use the calculate_average_grade function to get each student's average grade.
+3. Return a list of names of the top students.
+4. If no students meet the criteria, return an empty list.
+
+Add (replace) the following block of code at the bottom of your code:
+    add_student("Alice", 20, ["Math", "Physics"])
+    add_student("Bob", 22, ["Math", "Biology"])
+    add_student("Diana", 23, ["Chemistry", "Physics"])
+    add_grade("Alice", 90)
+    add_grade("Alice", 85)
+    add_grade("Bob", 75)
+    add_grade("Diana", 95)
+    print(filter_top_students(80))  # Should return ["Alice", "Diana"]
+    print(filter_top_students(90))  # Should return ["Diana"]
+    print(filter_top_students(100))  # Should return an empty list
+
+Take a moment to reflect on how you’ve combined dictionaries, sets, and decision-making to create a fully functional program. Great job! 🚀
+
+
+'''
 
 #Challenge1 Code
 student_records = {}
@@ -150,7 +192,7 @@ def is_enrolled(name, course):
     else:
         return False
 
-#Test cases as instructed ((Replaced them with Challenge5 Test Cases. Refer Challenge4 Test Cases. To execute test cases #4 comments other test cases))
+#Test cases as instructed (Replaced them with Challenge5 Test Cases. Refer Challenge4 Test Cases. To execute test cases #4 comments other test cases)
 '''
 add_student("Alice", 20, ["Math", "Physics"])
 add_student("Bob", 22, ["Biology", "Chemistry"])
@@ -175,7 +217,8 @@ def calculate_average_grade(name):
         return 0
     return sum(grades) / len(grades)
 
-#Test cases as instructed
+#Test cases as instructed (Replaced them with Challenge6 Test Cases. Refer Challenge5 Test Cases. To execute test cases #5 comments other test cases)
+'''
 add_student("Alice", 20, ["Math", "Physics"])
 add_student("Bob", 22, ["Biology", "Chemistry"])
 add_grade("Alice", 90)
@@ -185,3 +228,47 @@ print(calculate_average_grade("Alice"))  # Should return 87.5
 print(calculate_average_grade("Bob"))  # Should return 75.0
 print(calculate_average_grade("Charlie"))  # Non-existent student, should print message and return None
 print(calculate_average_grade("Alice"))  # Should return 87.5 again
+
+'''
+
+#Challenge6_Code: List by Course
+def list_students_by_course(course):
+    students_in_course = []
+    for name, details in student_records.items():
+        if course in details["courses"]:
+            students_in_course.append(name)
+    return students_in_course
+
+#Test cases as instructed (Replaced them with Challenge7 Test Cases. Refer Challenge5 Test Cases. To execute test cases #6 comments other test cases)
+'''
+add_student("Alice", 20, ["Math", "Physics"])
+add_student("Bob", 22, ["Math", "Biology"])
+add_student("Diana", 23, ["Chemistry", "Physics"])
+print(list_students_by_course("Math"))  # Should return ["Alice", "Bob"]
+print(list_students_by_course("Physics"))  # Should return ["Alice", "Diana"]
+print(list_students_by_course("Biology"))  # Should return ["Bob"]
+print(list_students_by_course("History"))  # Should return an empty list
+'''
+
+#Challenge7_Code: Top Students
+def filter_top_students(threshold):
+    top_students = []
+    for name in student_records:
+        avg = calculate_average_grade(name)
+        if avg is not None and avg > threshold:
+            top_students.append(name)
+    return top_students
+
+# Test cases as instructed
+add_student("Alice", 20, ["Math", "Physics"])
+add_student("Bob", 22, ["Math", "Biology"])
+add_student("Diana", 23, ["Chemistry", "Physics"])
+add_grade("Alice", 90)
+add_grade("Alice", 85)
+add_grade("Bob", 75)
+add_grade("Diana", 95)
+print(filter_top_students(80))  # Should return ["Alice", "Diana"]
+print(filter_top_students(90))  # Should return ["Diana"]
+print(filter_top_students(100))  # Should return an empty list
+
+
