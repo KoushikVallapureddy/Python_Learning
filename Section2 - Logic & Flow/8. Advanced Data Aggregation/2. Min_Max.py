@@ -33,3 +33,17 @@ In this example, min() returns "apple" because it comes first alphabetically, an
 
 '''
 
+#Challenge:
+'''
+You are given a list of numbers and a list of words. Your task is to write a program that:
+    Finds and prints the smallest and largest number in the list of numbers using min() and max().
+    Finds and prints the smallest and largest word in the list of words based on their lexicographical order.
+Check the test cases for output format
+'''
+numbers = [42, 17, 23, 56, 9, 34]
+words = ["kiwi", "apple", "banana", "cherry", "date"]
+
+print(f'Smallest number:',min(numbers))
+print(f'Largest number:',max(numbers))
+print(f'Smallest word:',min(words))
+print(f'Largest word:',max(words))
