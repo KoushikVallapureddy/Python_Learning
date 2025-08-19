@@ -16,3 +16,17 @@ Here's a simple example:
     # Output: [1, 4, 9, 16, 25]
 In this example, the list comprehension creates a new list called squares by taking each element n from the numbers list and squaring it.
 '''
+
+#Challenge:
+'''
+Create a function named double_numbers that takes a list of numbers numbers as an argument. 
+The function should use a list comprehension to create a new list where each number in the original list is doubled. 
+The function should return the new list.
+'''
+
+def double_numbers(numbers):
+    new_list = [n*2 for n in numbers]
+    return new_list
+
+numbers = eval(input())
+print(double_numbers(numbers))
