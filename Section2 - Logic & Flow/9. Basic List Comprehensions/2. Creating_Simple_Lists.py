@@ -25,3 +25,13 @@ Convert all items in a list to uppercase:
 List comprehensions make it easy to work with sequences, apply transformations, and even include conditions—all in one line!
 '''
 
+#Challenge:
+'''
+Create a function named get_word_lengths that takes a list of words as an argument and returns a list of the lengths of each word using a list comprehension.
+'''
+def get_word_lengths(words):
+    length = [len(word) for word in words]
+    return length
+
+words = eval(input())
+print(get_word_lengths(words))
