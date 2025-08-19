@@ -21,3 +21,14 @@ You can also provide a second argument to sum(), which serves as the starting va
 
 In this case, the sum() function starts with the value 10 and adds all elements from the numbers list to it.
 '''
+
+#Challenge:
+'''
+Write a program that gets a list of sales amounts and starting cash in the register and calculates the total sales, including the starting cash. 
+Print the result.
+'''
+sales = eval(input())
+starting_cash = eval(input())
+total = sum(sales, starting_cash)
+
+
