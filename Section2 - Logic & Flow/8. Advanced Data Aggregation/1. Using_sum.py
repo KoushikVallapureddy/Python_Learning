@@ -30,5 +30,6 @@ Print the result.
 sales = eval(input())
 starting_cash = eval(input())
 total = sum(sales, starting_cash)
+print(total)
 
 
