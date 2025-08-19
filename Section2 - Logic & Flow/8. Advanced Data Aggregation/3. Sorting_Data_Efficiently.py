@@ -40,3 +40,25 @@ For more complex sorting needs, you can use the key parameter to specify a funct
     # Output: ['apple', 'banana', 'cherry']
 In this case, sorted() sorts the words list based on the length of each word, using the len() function as the key.
 '''
+
+#Challenge:
+'''
+Write a program that performs the following sorting tasks using the sorted() function:
+    Sort a list of numbers in ascending order.
+    Sort the same list of numbers in descending order.
+    Sort a list of strings in alphabetical order.
+    Sort the same list of strings based on their length.
+'''
+
+numbers = [5, 3, 8, 1, 2]
+words = ["elephant", "cat", "dolphin", "bee"]
+
+ascending_numbers = sorted(numbers)
+descending_numbers = sorted(numbers, reverse=True)
+alphabetical_words = sorted(words)
+length_sorted_words = sorted(words, key=len)
+
+print("Ascending:", ascending_numbers)
+print("Descending:", descending_numbers)
+print("Alphabetical:", alphabetical_words)
+print("By Length:", length_sorted_words)
