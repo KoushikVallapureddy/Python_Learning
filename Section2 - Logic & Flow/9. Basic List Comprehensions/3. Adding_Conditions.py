@@ -18,6 +18,18 @@ Here's an example:
     evens = [n for n in numbers if n % 2 == 0]
     print(evens)
     # Output: [2, 4, 6]
-    
+
 In this example, the list comprehension creates a new list called evens by taking each element n from the numbers list and including it only if it is even (i.e., n % 2 == 0).
 '''
+
+#Challenge:
+'''
+Create a function named filter_and_square that takes a list of numbers numbers as an argument. 
+The function should use a list comprehension to create a new list that includes the squares of only the positive numbers from the original list.
+The function should return the new list.
+'''
+def filter_and_square(numbers):
+    new_list = [n**2 for n in numbers if n>0]
+    return new_list
+numbers = eval(input())
+print(filter_and_square(numbers))
