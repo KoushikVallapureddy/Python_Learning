@@ -41,7 +41,7 @@ For more complex sorting needs, you can use the key parameter to specify a funct
 In this case, sorted() sorts the words list based on the length of each word, using the len() function as the key.
 '''
 
-#Challenge:
+#Challenge1:
 '''
 Write a program that performs the following sorting tasks using the sorted() function:
     Sort a list of numbers in ascending order.
@@ -62,3 +62,41 @@ print("Ascending:", ascending_numbers)
 print("Descending:", descending_numbers)
 print("Alphabetical:", alphabetical_words)
 print("By Length:", length_sorted_words)
+
+#Challenge2:
+'''
+Create a function named analyze_grades that takes a dictionary of student grades as an argument. 
+The dictionary keys are student names, and the values are their corresponding grades. The function should perform the following operations:
+
+    Calculate the average grade of all students.
+    Find the highest and lowest grades.
+    Identify the student(s) with the highest and lowest grades.
+    Return a dictionary containing the following information:
+        'average': The average grade (rounded to 2 decimal places)
+        'highest': The highest grade
+        'lowest': The lowest grade
+        'top_student': The name of the student with the highest grade
+        'bottom_student': The name of the student with the lowest grade
+
+Test your function with the following dictionary:   
+student_grades = {'Alice': 85, 'Bob': 92, 'Charlie': 78, 'David': 95, 'Eve': 88}
+'''
+def analyze_grades(grades):
+    values = list(grades.values())
+    average = round(sum(values) / len(values), 2)
+    highest = max(values)
+    lowest = min(values)
+    # Find the first student with the highest and lowest grades
+    top_student = [name for name, grade in grades.items() if grade == highest][0]
+    bottom_student = [name for name, grade in grades.items() if grade == lowest][0]
+    return {
+        'average': average,
+        'highest': highest,
+        'lowest': lowest,
+        'top_student': top_student,
+        'bottom_student': bottom_student
+    }
+
+student_grades = {'Alice': 85, 'Bob': 92, 'Charlie': 78, 'David': 95, 'Eve': 88}
+result = analyze_grades(student_grades)
+print(result)
