@@ -33,7 +33,7 @@ In this example, min() returns "apple" because it comes first alphabetically, an
 
 '''
 
-#Challenge:
+#Challenge1:
 '''
 You are given a list of numbers and a list of words. Your task is to write a program that:
     Finds and prints the smallest and largest number in the list of numbers using min() and max().
@@ -47,3 +47,19 @@ print(f'Smallest number:',min(numbers))
 print(f'Largest number:',max(numbers))
 print(f'Smallest word:',min(words))
 print(f'Largest word:',max(words))
+
+
+#Challenge2:
+'''
+You are given two lists: temperatures containing daily temperatures in Fahrenheit, and humidity containing daily humidity percentages. 
+Your task is to write a program that:
+    Finds and prints the highest and lowest temperature from the temperatures list using max() and min().
+    Finds and prints the highest and lowest humidity from the humidity list using max() and min().
+Check the test cases for output format
+'''
+temperatures = [72, 68, 75, 80, 65, 70, 78]
+humidity = [60, 55, 65, 70, 50, 58, 62]
+print(f'Highest temperature: {max(temperatures)}°F')
+print(f'Lowest temperature: {min(temperatures)}°F')
+print(f'Highest humidity: {max(humidity)}%')
+print(f'Lowest humidity: {min(humidity)}%')
