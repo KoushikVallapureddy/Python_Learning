@@ -28,3 +28,19 @@ In this example, the list comprehension [n for n in numbers if n % 2 == 0] creat
 
 '''
 
+#Challenge:
+'''
+Write a function sum_positive_evens that takes a list of numbers as input. 
+Use a list comprehension to filter positive even numbers, then use sum() to calculate their total. Return the result.
+
+Example input:
+numbers = [-10, -5, 0, 2, 4, 7, 10, 12]
+
+Example output:
+28
+'''
+def sum_positive_evens(numbers):
+    list = sum([n for n in numbers if n > 0 and n %2 == 0])
+    return list
+numbers = eval(input())
+print(sum_positive_evens(numbers))
