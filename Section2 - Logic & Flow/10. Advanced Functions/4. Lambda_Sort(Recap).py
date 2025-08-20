@@ -1,4 +1,5 @@
 '''
+Recap Challenge: Lambda Sort
 Lambda functions are incredibly useful with the sorted() function to customize sorting in different scenarios. Here are a few examples:
 
 Sorting Strings by Length:
