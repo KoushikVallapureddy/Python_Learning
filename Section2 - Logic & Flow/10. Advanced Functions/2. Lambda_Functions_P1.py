@@ -23,3 +23,13 @@ The lambda function is assigned to the variable add, which can then be called li
 
 Lambda functions are often used in situations where a short, throwaway function is needed, such as with higher-order functions like map, filter, and reduce.
 '''
+
+#Challenge1:
+'''
+Create a lambda function named multiply that takes three arguments, x, y, and z, and returns their product. 
+After defining the lambda function, call it with the values 2, 3, and 4, and print the result.
+'''
+mutiply = lambda x, y, z : x * y * z
+result = mutiply(2,3,4)
+print(result)
+
