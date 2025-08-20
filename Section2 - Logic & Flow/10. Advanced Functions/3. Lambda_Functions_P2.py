@@ -17,3 +17,17 @@ You can use more complex conditions as well:
     print(grade_status(75))  # Output: "Pass"
 
 '''
+
+#Challenge1:
+'''
+Create a lambda function named categorize_number that takes a number as an argument and returns:
+    "Positive" if the number is greater than 0
+    "Zero" if the number is equal to 0
+    "Negative" if the number is less than 0
+
+Then use this lambda function to categorize a number received from input.
+'''
+
+number = int(input())
+categorize_number = lambda num : 'Positive' if num > 0 else 'Zero' if num == 0 else 'Negative'
+print(categorize_number(number))
