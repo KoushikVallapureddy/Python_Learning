@@ -20,3 +20,29 @@ Returning multiple values is useful when you need to return more than one piece 
 Instead of creating a complex data structure like a list or a dictionary, you can simply return the values as a tuple.
 '''
 
+#Challenge:
+'''
+Create a function named get_student_info that takes no arguments. The function should return a tuple containing the following information about a student:
+    Name: "Bob"
+    Age: 20
+    Major: "Computer Science"
+After defining the function, call it and unpack the returned values into three variables: student_name, student_age, and student_major. 
+Then, print the values of these variables.
+'''
+
+def get_student_info():
+    student= {
+        'Name': 'Bob',
+        'Age' : '20',
+        'Major' : 'Computer Science'
+        }
+    student_name = student['Name']
+    student_age = student['Age']
+    student_major = student['Major']
+    return student_name, student_age, student_major
+
+student_name, student_age, student_major = get_student_info()
+print(student_name)
+print(student_age)
+print(student_major)
+
