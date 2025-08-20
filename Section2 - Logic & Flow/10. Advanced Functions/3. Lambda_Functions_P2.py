@@ -18,7 +18,7 @@ You can use more complex conditions as well:
 
 '''
 
-#Challenge1:
+#Challenge:
 '''
 Create a lambda function named categorize_number that takes a number as an argument and returns:
     "Positive" if the number is greater than 0
