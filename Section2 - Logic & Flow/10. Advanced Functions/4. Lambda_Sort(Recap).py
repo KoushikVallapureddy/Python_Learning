@@ -27,3 +27,17 @@ Sorting Tuples by Multiple Criteria:
     # Output: [('Alice', 25), ('Charlie', 25), ('Bob', 30)]
 
 '''
+
+
+#Challenge:
+'''
+Create a function named sort_tuples that takes a list of tuples data as an argument. 
+Each tuple in data contains two elements: a string and a number. 
+The function should use the sorted() function along with a lambda function to sort the list of tuples based on the second element (the number) in ascending order. The function should return the sorted list of tuples.
+'''
+
+def sort_tuples(data):
+    return sorted(data, key=lambda x: x[1])
+
+data = eval(input())
+print(sort_tuples(data))
