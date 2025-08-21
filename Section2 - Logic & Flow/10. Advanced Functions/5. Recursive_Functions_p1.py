@@ -1,4 +1,6 @@
 '''
+Recursive Function Part1:
+
 A recursive function is a function that calls itself to solve smaller instances of a problem. Each recursive call must bring the function closer to a base case, which stops the recursion.
 
 Example: Summing numbers from 1 to n:
@@ -8,3 +10,16 @@ Example: Summing numbers from 1 to n:
         return n + sum_to_n(n - 1)  # Recursive step
     print(sum_to_n(5))  # Output: 15
 '''
+
+#Challenge1:
+'''
+Write a recursive function named count_down that takes a positive integer n as an argument and prints each number from n down to 0.
+'''
+def count_down(n):
+    if n < 0:
+        return
+    print(n)
+    count_down(n-1)
+
+n = int(input())
+count_down(n)
