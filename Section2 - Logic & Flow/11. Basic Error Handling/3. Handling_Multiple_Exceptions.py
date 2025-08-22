@@ -31,3 +31,39 @@ The order of except blocks matters - always place more specific exceptions befor
 
 
 '''
+
+#Challenge:
+'''
+Create a function called process_data that:
+    Takes a string input representing potential data
+    Tries to convert it to an integer, then calculates 100 divided by that integer
+    Returns the result
+    Handles at least 3 possible exceptions: 
+        ValueError if the input cannot be converted to an integer (print "Input must be a number!")
+        ZeroDivisionError if the input is 0 (print "Cannot divide by zero!")
+        Any other exception with a generic handler (print "An unexpected error occurred!")
+'''
+
+def process_data(input_string):
+    try:
+        # Try to convert the input string to an integer
+        value = int(input_string)
+        # Calculate 100 divided by the input value
+        result = 100 / value
+        # Return the result
+        print(result)
+        return result
+    except ValueError:
+        # Handle the case where input cannot be converted to an integer
+        print("Input must be a number!")
+        
+    except ZeroDivisionError:
+        # Handle the case where input is zero
+        print("Cannot divide by zero!")    
+    except:
+        # Handle any other unexpected exceptions
+        print("An unexpected error occurred!")
+    return None
+
+input_string = input()
+process_data(input_string)
