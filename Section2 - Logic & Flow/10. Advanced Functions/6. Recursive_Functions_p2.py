@@ -27,3 +27,32 @@ In this example, the recursive_reverse function calls itself with the rest of th
 
 
 '''
+
+#Challenge:
+'''
+Write a recursive function named fibonacci that takes a positive integer n as an argument and returns the nth Fibonacci number.
+The Fibonacci sequence is defined as:
+    fibonacci(1) = 0
+    fibonacci(2) = 1
+    fibonacci(n) = fibonacci(n-1) + fibonacci(n-2) for n > 2.
+
+Example Input:
+    n = 6
+
+Example Output:
+    5
+'''
+
+def fibonacci(n):
+    if n == 1:
+        return 0
+    if n == 2:
+        return 1
+    if n > 2:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+n = int(input())
+print(fibonacci(n))
+
+
+
