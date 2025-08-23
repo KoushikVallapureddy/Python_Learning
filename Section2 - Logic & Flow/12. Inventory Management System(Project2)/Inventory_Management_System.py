@@ -26,10 +26,10 @@ Create a function named add_item that takes three arguments: item (string), pric
     Print "Item '<item>' added successfully.".
 
 Add (replace) the following block of code at the bottom of your code:
-    add_item("Apple", 0.5, 100)
-    add_item("Banana", 0.2, 50)
-    add_item("Apple", 0.6, 30)  # Should print an error
-    print(inventory)
+add_item("Apple", 0.5, 100)
+add_item("Banana", 0.2, 50)
+add_item("Apple", 0.6, 30)  # Should print an error
+print(inventory)
 '''
 
 #Challenge3: Update Stock
@@ -44,16 +44,38 @@ Create a function named update_stock that takes two arguments: item (string) and
     Print "Stock for '<item>' updated successfully.".
 
 Add (replace) the following block of code at the bottom of your code:
-    add_item("Apple", 0.5, 100)
-    add_item("Banana", 0.2, 50)
-    add_item("Apple", 0.6, 30)  # Should print an error
-    update_stock("Apple", -20)
-    update_stock("Banana", 30)
-    update_stock("Orange", 10)  # Should print an error
-    update_stock("Apple", -90)
-    print(inventory)  
+add_item("Apple", 0.5, 100)
+add_item("Banana", 0.2, 50)
+add_item("Apple", 0.6, 30)  # Should print an error
+update_stock("Apple", -20)
+update_stock("Banana", 30)
+update_stock("Orange", 10)  # Should print an error
+update_stock("Apple", -90)
+print(inventory)  
 
 '''
+#Challenge4: Check Availablity
+'''
+Create a function named check_availability that takes one argument: item (string). The function should:
+
+    Check if the item exists in the inventory dictionary.
+        If it does not exist, return "Item not found".
+    If the item exists, return the current stock of the item.
+
+Add (replace) the following block of code at the bottom of your code:
+add_item("Apple", 0.5, 100)
+add_item("Banana", 0.2, 50)
+update_stock("Apple", -20)
+update_stock("Banana", 30)
+print(check_availability("Apple"))  # Should return 80
+print(check_availability("Banana"))  # Should return 80
+print(check_availability("Orange"))  # Should return "Item not found"
+'''
+
+
+
+
+
 #Challege1 Code:
 inventory = {}
 
@@ -85,6 +107,8 @@ def update_stock(item, quantity):
     inventory[item]["stock"] = new_stock
     print(f"Stock for '{item}' updated successfully.")
 
+#Below code is replaced and moved to Challenge3 code. In order to test Challenge2, uncomment below code and comment other codes.
+'''
 add_item("Apple", 0.5, 100)
 add_item("Banana", 0.2, 50)
 add_item("Apple", 0.6, 30)  # Should print an error
@@ -93,4 +117,19 @@ update_stock("Banana", 30)
 update_stock("Orange", 10)  # Should print an error
 update_stock("Apple", -90)
 print(inventory)
-        
+'''
+
+#Challenge4 Code: Check Availablity
+def check_availability(item):
+    if item in inventory:
+        return inventory[item]['stock']
+    else:
+        return "Item not found"
+
+add_item("Apple", 0.5, 100)
+add_item("Banana", 0.2, 50)
+update_stock("Apple", -20)
+update_stock("Banana", 30)
+print(check_availability("Apple"))  # Should return 80
+print(check_availability("Banana"))  # Should return 80
+print(check_availability("Orange"))  # Should return "Item not found"
