@@ -51,3 +51,18 @@ def convert_to_uppercase(strings):
 
 strings = ['hello', 'world', 'python']
 print(convert_to_uppercase(strings))
+
+
+#Challenge2:
+'''
+Create a function named calculate_lengths that takes a list of words words as an argument. 
+The function should use the map() function along with a lambda function to calculate the length of each word in the list. 
+The function should return a list containing the lengths of the words.
+'''
+
+def calculate_lengths(words):
+    word_lengths = map(lambda w: len(w), words)
+    return list(word_lengths)
+
+words = ["apple","banana","cherry","date","fig"]
+print(calculate_lengths(words))
