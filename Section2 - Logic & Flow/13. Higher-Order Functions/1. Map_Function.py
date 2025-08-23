@@ -30,6 +30,24 @@ You can also use a lambda function instead of defining a separate function:
     squared_numbers = map(lambda n: n * n, numbers)
     print(list(squared_numbers))
     # Output: [1, 4, 9, 16, 25]
-    
+
 The map() function works with any collection of items - not just numbers. It could be strings, or any other type of data you want to process in the same way.
 '''
+
+
+#Challenge1:
+'''
+Create a function named convert_to_uppercase that takes a list of strings strings as an argument. 
+The function should use the map() function along with a lambda function to convert each string in the list to uppercase. 
+The function should return a list containing the uppercase strings.
+'''
+
+def convert_to_uppercase(strings):
+    # Use map() with a lambda function to convert strings to uppercase
+    uppercase_strings = map(lambda s: s.upper(), strings)
+    
+    # Return the list of uppercase strings
+    return list(uppercase_strings)
+
+strings = ['hello', 'world', 'python']
+print(convert_to_uppercase(strings))
