@@ -1,5 +1,5 @@
 '''
-External Files:
+1. External Files:
 
 External files let you organize your classes in separate Python files and import them into your main program.
 
@@ -29,4 +29,6 @@ The first my_class is the filename (without .py), and MyClass is the class name 
 '''
 You are given Python files (my_class.py and driver.py), add an import statement in the driver.py file to connect the files and use the class from the external file!
 '''
-
+class MyClass:
+    def __init__(self):
+        pass

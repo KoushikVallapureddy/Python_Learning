@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Section3 - Fundamentals of OOP/1. "
+    ]
+}
