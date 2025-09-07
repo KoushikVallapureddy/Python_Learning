@@ -1,0 +1,109 @@
+The **kwarg
+kwargs is short for "keyword arguments". It allows a function to accept any number of named arguments (like key=value pairs) without having to define them all in advance.
+
+How it works:
+
+*args → collects extra positional arguments into a tuple
+kwargs → collects extra keyword arguments into a dictionary
+Simple Example
+
+Let's start with the simplest possible example:
+
+def greet(**kwargs):
+    print(kwargs)
+
+greet(name="Alice", age=25, country="Australia")
+Output:
+
+{'name': 'Alice', 'age': 25, 'country': 'Australia'}
+As you can see, kwargs automatically collects all the keyword arguments into a dictionary.
+
+Using the Dictionary
+
+Since kwargs creates a dictionary, you can loop through it:
+
+def print_info(**kwargs):
+    print("Information received:")
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Bob", age=30, job="Teacher")
+Output:
+
+Information received:
+name: Bob
+age: 30
+job: Teacher
+Mixing Regular Parameters with kwargs
+
+You can combine regular parameters with kwargs:
+
+def create_profile(name, **details):
+    print(f"Creating profile for: {name}")
+    print("Additional details:")
+    for key, value in details.items():
+        print(f"  {key}: {value}")
+
+create_profile("Sarah", age=28, city="London", hobby="Reading")
+Output:
+
+Creating profile for: Sarah
+Additional details:
+  age: 28
+  city: London
+  hobby: Reading
+Empty kwargs
+
+If no keyword arguments are passed, kwargs will be an empty dictionary:
+
+def show_data(**kwargs):
+    if kwargs:
+        print("Data:", kwargs)
+    else:
+        print("No data provided")
+
+show_data()  # No arguments
+show_data(item="apple")  # With arguments
+Output:
+
+No data provided
+Data: {'item': 'apple'}
+Real-World Example: Class with kwargs
+
+Here's how you might use kwargs in a class:
+
+class Person:
+    def __init__(self, name, **kwargs):
+        self.name = name
+        self.details = kwargs
+    
+    def show_info(self):
+        print(f"Name: {self.name}")
+        for key, value in self.details.items():
+            print(f"{key}: {value}")
+
+person = Person("Alice", age=25, city="New York", job="Engineer")
+person.show_info()
+Output:
+
+Name: Alice
+age: 25
+city: New York
+job: Engineer
+Unpacking Dictionaries
+
+You can also unpack dictionaries when calling functions:
+
+def display_settings(**kwargs):
+    for setting, value in kwargs.items():
+        print(f"{setting} = {value}")
+
+settings = {"debug": True, "verbose": False, "timeout": 30}
+display_settings(**settings)  # Unpacks the dictionary
+Output:
+
+debug = True
+verbose = False
+timeout = 30
+Key Points:
+
