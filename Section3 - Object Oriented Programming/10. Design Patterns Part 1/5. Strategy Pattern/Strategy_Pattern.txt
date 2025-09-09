@@ -1,0 +1,82 @@
+The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. You can switch algorithms at runtime without changing the client code.
+
+Here are simple strategy classes for different payment methods:
+
+class CreditCard:
+    def pay(self, amount):
+        return f"Paid ${amount} with Credit Card"
+
+class PayPal:
+    def pay(self, amount):
+        return f"Paid ${amount} with PayPal"
+
+class Bitcoin:
+    def pay(self, amount):
+        return f"Paid ${amount} with Bitcoin"
+Each strategy implements the same method (pay) but with different behavior.
+
+Create a context class that uses strategies:
+
+class ShoppingCart:
+    def __init__(self):
+        self.total = 0
+        self.payment_strategy = None
+    
+    def add_item(self, price):
+        self.total += price
+    
+    def set_payment_strategy(self, strategy):
+        self.payment_strategy = strategy
+    
+    def checkout(self):
+        return self.payment_strategy.pay(self.total)
+The context class can switch between different payment strategies.
+
+Use the strategy pattern:
+
+cart = ShoppingCart()
+cart.add_item(50)
+cart.add_item(30)
+
+# Use credit card strategy
+cart.set_payment_strategy(CreditCard())
+print(cart.checkout())
+
+# Switch to PayPal strategy
+cart.set_payment_strategy(PayPal())
+print(cart.checkout())
+Create another example with sorting strategies:
+
+class BubbleSort:
+    def sort(self, data):
+        return f"Bubble sorted: {sorted(data)}"
+
+class QuickSort:
+    def sort(self, data):
+        return f"Quick sorted: {sorted(data)}"
+
+class Sorter:
+    def __init__(self, strategy):
+        self.strategy = strategy
+    
+    def set_strategy(self, strategy):
+        self.strategy = strategy
+    
+    def sort_data(self, data):
+        return self.strategy.sort(data)
+
+# Use different sorting strategies
+numbers = [3, 1, 4, 1, 5]
+
+sorter = Sorter(BubbleSort())
+print(sorter.sort_data(numbers))
+
+sorter.set_strategy(QuickSort())
+print(sorter.sort_data(numbers))
+Output:
+
+Paid $80 with Credit Card
+Paid $80 with PayPal
+Bubble sorted: [1, 1, 3, 4, 5]
+Quick sorted: [1, 1, 3, 4, 5]
+Key Point: The Strategy Pattern lets you swap algorithms at runtime. Define different strategies with the same interface, then let the context class choose which one to use. This makes your code flexible and easy to extend with new algorithms without changing existing code.

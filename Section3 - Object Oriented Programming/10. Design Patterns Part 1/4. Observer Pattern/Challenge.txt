@@ -1,0 +1,48 @@
+Implement the Observer Pattern by creating a weather monitoring system. You need to create two classes in the designated areas of the code code.
+
+Step 1: Create the WeatherStation class
+
+Write your WeatherStation class where the comment indicates. This class should:
+
+Inherit from the Subject class (use class WeatherStation(Subject):)
+Initialize with:
+Call the parent constructor using super().__init__()
+Set initial temperature to 0 using a private attribute self._temperature
+Implement set_temperature(self, temperature):
+Update the private temperature attribute
+Call self.notify(self._temperature) to notify all observers
+Implement get_temperature(self):
+Return the current temperature value
+Step 2: Create the WeatherDisplay class
+
+Write your WeatherDisplay class where the comment indicates. This class should:
+
+Inherit from the Observer class (use class WeatherDisplay(Observer):)
+Initialize with:
+Accept a name parameter
+Store the name as self.name
+Implement update(self, temperature):
+Print the temperature update message in the exact format shown below
+Message Format:
+
+When a display receives a temperature update, it must print exactly:
+
+Display [name]: Current temperature is [temperature]C
+Example Usage:
+
+# Create weather station and displays
+station = WeatherStation()
+phone_display = WeatherDisplay("Phone")
+tablet_display = WeatherDisplay("Tablet")
+
+# Attach displays to station
+station.attach(phone_display)
+station.attach(tablet_display)
+
+# Update temperature - both displays will be notified
+station.set_temperature(25.5)
+
+# Output:
+# Display Phone: Current temperature is 25.5C
+# Display Tablet: Current temperature is 25.5C
+Remember: Use the existing attach() and detach() methods from the Subject class to manage observers. Your classes should work with the provided Subject/Observer base classes.
