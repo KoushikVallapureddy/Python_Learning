@@ -1,0 +1,63 @@
+1. Project Overview: 
+
+    In this challenge, you'll implement the foundation for a Library Management System.
+
+    Edit library.py to implement the required classes following the TODO comments. The driver file contains extensive test scenarios that validate your implementation.
+
+    Follow the TODO comments in library.py for step-by-step guidance
+    Implement the Library class with proper initialization and string representation
+
+2. Book and User Classes:
+
+    In this challenge, you'll implement the Book class for a library management system using a multi-file structure with comprehensive test coverage.
+
+    Edit book.py to implement the Book class following the TODO comments. The implementation should:
+
+    Initialize with title, author, and ISBN parameters
+    Track availability status and borrower information
+    Implement proper string representation
+
+3. Borrowing System:
+
+    In this challenge, you'll implement a library management system with borrowing functionality.
+
+    Implement the required functionality in the following files:
+
+    book.py - Contains Book class definition
+    user.py - Contains User class definition
+    library.py - Contains Library class where you'll implement the borrow_book method
+    Follow the TODO comments in each file for step-by-step implementation guidance. The borrow_book method should handle various scenarios including book/user not found and availability checks.
+
+4. Search Functionality:
+
+    In this challenge, you'll implement a library management system with book search functionality.
+
+    You'll work with three editable files:
+
+    book.py - Contains the Book class definition
+    user.py - Contains the User class definition
+    library.py - Contains the Library class where you'll implement search functionality
+    Follow the TODO comments in each file to implement the required functionality. Your main task is to add a search_by_title method to the Library class that performs case-insensitive searches on book titles.
+
+5. Admin Interface:
+
+    In this challenge, you'll implement administrative functions for a library management system.
+
+    You'll need to modify the library.py file to add a get_statistics method to the Library class that returns a dictionary with key statistics about the library's state. The implementation details are provided in TODO comments within the file.
+
+    The statistics should include:
+
+    Total number of books
+    Available books count
+    Borrowed books count
+    Total users count
+    Number of users with borrowed books
+    The book.py and user.py files contain pre-implemented classes that your solution will interact with. While you can review these files to understand the system structure, your implementation should focus on the library.py file.
+
+6. Testing and Integration:
+
+    In this challenge, you'll implement a multi-file library system with comprehensive test coverage. You'll work with three read-only files and one editable file that contains detailed TODO comments guiding your implementation:
+
+    book.py - Contains the Book class definition
+    user.py - Contains the User class you need to implement
+    library.py - Contains the Library class definition
